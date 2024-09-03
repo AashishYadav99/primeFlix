@@ -15,13 +15,9 @@ function ExplorePage() {
           page: pageNo,
         },
       });
-      console.log("check it", params.explore);
-
       setData((prev) => {
         return [...prev, ...response.data.results];
       });
-      console.log("data is :", data);
-
       setTotalPageNo(response.data.total_pages);
     } catch (error) {
       console.log(error);

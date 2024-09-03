@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/Card";
@@ -7,6 +7,7 @@ function SearchPage() {
   const location = useLocation();
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
+  const navigate=useNavigate()
 
   // Function to fetch data based on the query
   const fetchData = async () => {
@@ -15,7 +16,7 @@ function SearchPage() {
       const queryParams = new URLSearchParams(location.search);
       const query = queryParams.get("q") || "";
 
-      const response = await axios.get(`/search/collection`, {
+      const response = await axios.get(`/search/multi`, {
         params: {
           query: query,
           page: 1,
@@ -39,7 +40,10 @@ function SearchPage() {
 
   return (
     <>
-      <div className="pt-16">
+      <div className="py-16">
+        <div className="lg:hidden my-2 mx-1 sticky top-[70px] z-30">
+          <input type=" text" placeholder="search here..." onChange={(e)=>navigate(`/search?q=${e.target.value}`)} className="px-4 py-1 text-lg w-full bg-white rounded-full text-neutral-900"/>
+        </div>
         <div className="container mx-auto">
           <h3 className="capitalize text-lg lg:text-xl font-semibold my-3">
             Search Results for "{query}"

@@ -15,7 +15,7 @@ function HorizpntalScrollCard({ data = [], heading ,trending,media_type}) {
   return (
     <>
       <div className="container mx-auto px-3 my-10">
-        <h2 className="text-lg lg:text-2xl font-bold mb-3 text-white">
+        <h2 className="text-lg lg:text-2xl font-bold mb-3 text-white Capital">
           {heading}
         </h2>
         <div className=" relative">

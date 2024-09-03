@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./index.css"; // Ensure Tailwind CSS is being imported here
+import "./index.css";
 import MobileNavigation from "./components/MobileNavigation";
 import axios from "axios";
 import { useEffect } from "react";
@@ -35,14 +35,15 @@ function App() {
   }, []);
   return (
     <>
-      <main className="pb-14 lg:pb-0">
-        <Header />
-        <div className="">
-          <Outlet />
+     <main className='pb-14 lg:pb-0'>
+        <Header/>
+        <div className='min-h-[90vh]'>
+            <Outlet/>
         </div>
-        <Footer />
-        <MobileNavigation />
-      </main>
+        <Footer/>
+        <MobileNavigation/>
+    </main>
+    
     </>
   );
 }

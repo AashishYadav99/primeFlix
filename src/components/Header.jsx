@@ -21,8 +21,8 @@ function Header() {
   };
   return (
     <>
-      <header className="fixed top-0 w-full h-16 z-50 bg-neutral-800 bg-opacity-75">
-        <div className="container mx-auto px-2 flex items-center h-full">
+      <header className="fixed top-0 w-full h-16 z-40 bg-neutral-800 bg-opacity-75">
+        <div className="container mx-auto px-3 flex items-center h-full">
           <Link to={"/"}>
             <img
             className="rounded-full h-12 bg-black"
@@ -62,7 +62,7 @@ function Header() {
                   name=""
                   id=""
                   placeholder="Search Movie"
-                  className="bg-transparent px-4 py-1"
+                  className="hidden sm:block  bg-transparent px-4 py-1 "
                 />
                 <button className="text-2xl text-white">
                   <CiSearch />

@@ -28,7 +28,7 @@ function BannerHome() {
       }
     }, 2000);
     return () => clearInterval(interval);
-  }, [bannerData, imageURL]);
+  }, [bannerData, imageURL,currentImage]);
   return (
     <>
       <section className="w-full h-full">
@@ -46,6 +46,7 @@ function BannerHome() {
                     alt=""
                     className="h-full w-full object-cover"
                   />
+                  
                 </div>
 
                 <div className="absolute top-0 w-full h-full hidden flex items-center justify-between px-4 group-hover:lg:flex">
