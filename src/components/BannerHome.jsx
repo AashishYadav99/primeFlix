@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { FaAngleRight } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function BannerHome() {
   const bannerData = useSelector((state) => state.movieData.bannerData);
@@ -28,7 +29,7 @@ function BannerHome() {
       }
     }, 2000);
     return () => clearInterval(interval);
-  }, [bannerData, imageURL,currentImage]);
+  }, [bannerData, imageURL, currentImage]);
   return (
     <>
       <section className="w-full h-full">
@@ -46,7 +47,6 @@ function BannerHome() {
                     alt=""
                     className="h-full w-full object-cover"
                   />
-                  
                 </div>
 
                 <div className="absolute top-0 w-full h-full hidden flex items-center justify-between px-4 group-hover:lg:flex">
@@ -73,9 +73,11 @@ function BannerHome() {
                       <span>|</span>
                       <p>View : {Number(data.popularity).toFixed(0)}</p>
                     </div>
-                    <button className="bg-white px-4 py-2 text-black font-bold rounded mt-4 shadow-md transition-all">
-                      Play Now
-                    </button>
+                    <Link to={"/" + data?.media_type + "/" + data.id}>
+                      <button className="bg-white px-4 py-2 text-black font-bold rounded mt-4 shadow-md transition-all">
+                        Play Now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
