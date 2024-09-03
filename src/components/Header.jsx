@@ -64,7 +64,7 @@ function Header() {
                   placeholder="Search Movie"
                   className="hidden sm:block  bg-transparent px-4 py-1 "
                 />
-                <button className="text-2xl text-white">
+                <button className="text-2xl text-white hidden sm:block">
                   <CiSearch />
                 </button>
               </form>
