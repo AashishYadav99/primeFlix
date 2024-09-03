@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import UseFetchDetail from "../hooks/useFetchDetail";
-import UseFetch from "../hooks/useFetch";
+import UseFetchDetail from "../hooks/UseFetchDetail";
+import UseFetch from "../hooks/UseFetch";
 import Divider from "../components/Divider";
 import HorizpntalScrollCard from "../components/HorizpntalScrollCard";
 import { useState } from "react";
