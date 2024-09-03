@@ -1,5 +1,5 @@
 import { IoCloseSharp } from "react-icons/io5";
-import UseFetchDetail from "../hooks/useFetchDetail";
+import UseFetchDetail from "../hooks/UseFetchDetail";
 
 function VideoPlay({ data, close, media_type }) {
   const { data: videoData } = UseFetchDetail(
